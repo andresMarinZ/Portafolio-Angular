@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { InfoPaginasService } from './services/info-paginas.service';
+import { ProductosService } from './services/productos.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'template';
+  constructor ( private _infoService: InfoPaginasService,
+                private _productos:ProductosService
+                ){
+
+  }
 }
